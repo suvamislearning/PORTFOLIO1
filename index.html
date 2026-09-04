@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suvam Gyawali | Full Stack & AI Engineer</title>
+  <meta name="description" content="Portfolio of Suvam Gyawali - Full Stack & AI Engineer specializing in modern frontend architecture, resilient backend microservices, and cutting-edge AI / LLM solutions." />
+  <meta name="keywords" content="Suvam Gyawali, Full Stack Developer, AI Engineer, Backend Developer, Frontend Developer, React, Node.js, FastAPI, RAG, PyTorch" />
+  <meta name="author" content="Suvam Gyawali" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Suvam Gyawali | Full Stack & AI Engineer" />
+  <meta property="og:description" content="Explore high-impact projects across Frontend, Backend, and AI systems." />
+  <meta property="og:image" content="assets/images/suvam-avatar.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Particle Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="logo" id="nav-logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Suvam<span class="highlight">.dev</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active" id="nav-link-home">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link" id="nav-link-skills">Skills Matrix</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link" id="nav-link-projects">Projects</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link" id="nav-link-experience">Experience</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-glow" id="nav-cta-btn">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge" id="status-badge">
+            <span class="status-dot"></span>
+            <span>Available for innovative roles & contracts</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Suvam Gyawali</span>
+          </h1>
+
+          <div class="typewriter-container">
+            <span class="typewriter-prefix">I engineer </span>
+            <span class="typewriter-text" id="typewriter-text"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Passionate Full Stack & AI Engineer dedicated to building lightning-fast reactive web applications, 
+            resilient distributed backend systems, and cutting-edge intelligent AI pipelines powered by Large Language Models.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-lg btn-glow" id="hero-explore-projects">
+              <i class="fa-solid fa-code"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="#skills" class="btn btn-outline btn-lg" id="hero-view-skills">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>Explore Skills</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary btn-lg" id="hero-contact-me">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-number">20+</span>
+              <span class="metric-label">Projects Shipped</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-number">99.9%</span>
+              <span class="metric-label">Uptime Architecture</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-number">3</span>
+              <span class="metric-label">Core Tech Pillars</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-card glass-panel">
+              <div class="avatar-image-container">
+                <img src="assets/images/suvam-avatar.jpg" alt="Suvam Gyawali" class="avatar-img" />
+              </div>
+              <div class="avatar-info">
+                <div class="avatar-name-row">
+                  <h3 class="avatar-title">Suvam Gyawali</h3>
+                  <span class="verified-badge" title="Verified Engineer"><i class="fa-solid fa-circle-check"></i></span>
+                </div>
+                <p class="avatar-subtitle">Full Stack & AI Architect</p>
+                <div class="tech-pills">
+                  <span class="pill pill-cyan"><i class="fa-brands fa-react"></i> React</span>
+                  <span class="pill pill-green"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                  <span class="pill pill-purple"><i class="fa-solid fa-brain"></i> PyTorch</span>
+                  <span class="pill pill-amber"><i class="fa-brands fa-python"></i> FastAPI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating badges -->
+            <div class="floating-badge badge-frontend">
+              <i class="fa-brands fa-react"></i>
+              <div>
+                <strong>Frontend</strong>
+                <small>Reactive UI/UX</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-backend">
+              <i class="fa-solid fa-server"></i>
+              <div>
+                <strong>Backend</strong>
+                <small>Distributed APIs</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-ai">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <div>
+                <strong>AI & LLMs</strong>
+                <small>RAG & Agents</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Get To Know Me</span>
+          <h2 class="section-title">Bridging Code, Cloud & <span class="gradient-text">Artificial Intelligence</span></h2>
+          <p class="section-subtitle">
+            Crafting software at the intersection of stunning visual interaction, robust distributed systems, and intelligent machine learning.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel">
+            <div class="about-icon-wrapper cyan">
+              <i class="fa-solid fa-terminal"></i>
+            </div>
+            <h3>Who I Am</h3>
+            <p>
+              I am <strong>Suvam Gyawali</strong>, a multi-disciplinary software engineer with a deep passion for building
+              end-to-end digital experiences. Whether architecting high-concurrency microservices, crafting silky 60fps web interfaces,
+              or engineering contextual RAG pipelines for LLMs, I thrive on tackling complex engineering challenges.
+            </p>
+            <div class="about-tags">
+              <span class="tag">Problem Solver</span>
+              <span class="tag">System Architect</span>
+              <span class="tag">AI Explorer</span>
+              <span class="tag">Clean Code Advocate</span>
+            </div>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="about-icon-wrapper green">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3>Engineering Philosophy</h3>
+            <p>
+              Great software isn't just about syntax—it's about empathy for the user and respect for system reliability.
+              I adhere to clean domain-driven architecture, obsessive performance optimization, comprehensive test coverage,
+              and maintainable codebases that scale seamlessly with business demands.
+            </p>
+            <ul class="about-checklist">
+              <li><i class="fa-solid fa-check"></i> Zero-compromise UI responsiveness & accessibility</li>
+              <li><i class="fa-solid fa-check"></i> Resilient, scalable data pipelines & caching strategies</li>
+              <li><i class="fa-solid fa-check"></i> Thoughtful AI integration that brings measurable ROI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Technical Expertise</span>
+          <h2 class="section-title">Categorized <span class="gradient-text">Skills Matrix</span></h2>
+          <p class="section-subtitle">
+            Separately architected capabilities spanning Useful Frontend craft, Best Backend engineering, and Cutting-Edge AI systems.
+          </p>
+        </div>
+
+        <!-- Skills Navigation Tabs -->
+        <div class="skills-tab-nav" id="skills-tab-nav">
+          <button class="skills-tab-btn active" data-target="all-skills" id="tab-all-skills">
+            <i class="fa-solid fa-border-all"></i> All Pillars
+          </button>
+          <button class="skills-tab-btn tab-frontend" data-target="frontend-skills" id="tab-frontend">
+            <i class="fa-brands fa-react"></i> Frontend Skills
+          </button>
+          <button class="skills-tab-btn tab-backend" data-target="backend-skills" id="tab-backend">
+            <i class="fa-solid fa-server"></i> Backend Skills
+          </button>
+          <button class="skills-tab-btn tab-ai" data-target="ai-skills" id="tab-ai">
+            <i class="fa-solid fa-brain"></i> AI & Machine Learning
+          </button>
+        </div>
+
+        <div class="skills-columns-grid">
+          
+          <!-- PILLAR 1: FRONTEND SKILLS -->
+          <div class="skill-category-card glass-panel card-frontend" data-category="frontend">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <div>
+                <div class="category-badge">Useful & Modern</div>
+                <h3 class="category-title">Frontend Skills</h3>
+              </div>
+            </div>
+            <p class="category-desc">
+              Building dynamic, highly responsive, and accessible user interfaces that engage users and deliver frictionless digital journeys.
+            </p>
+
+            <div class="skills-list">
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-brands fa-react"></i> React.js & Next.js (App Router)</span>
+                  <span class="skill-level">95%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-cyan" style="width: 95%;"></div>
+                </div>
+                <span class="skill-note">Server Components, SSR/SSG, Custom Hooks, Performance Optimization</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-brands fa-js"></i> TypeScript & Modern JavaScript</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-cyan" style="width: 92%;"></div>
+                </div>
+                <span class="skill-note">Type safety, Generics, Async programming, DOM APIs, ESNext</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-brands fa-css3-alt"></i> Modern CSS3 & HTML5 Structure</span>
+                  <span class="skill-level">94%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-cyan" style="width: 94%;"></div>
+                </div>
+                <span class="skill-note">CSS Custom Properties, Flexbox, CSS Grid, Keyframe Animations, Semantic markup</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-wind"></i> TailwindCSS & Glassmorphic UI</span>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-cyan" style="width: 90%;"></div>
+                </div>
+                <span class="skill-note">Utility-first design systems, responsive layouts, dark modes, micro-interactions</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-arrows-split-up-and-left"></i> State Architecture (Zustand/Redux)</span>
+                  <span class="skill-level">88%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-cyan" style="width: 88%;"></div>
+                </div>
+                <span class="skill-note">Predictable client state, Context API, persistent caches, optimistic updates</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-gauge-high"></i> Web Performance, SEO & a11y</span>
+                  <span class="skill-level">91%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-cyan" style="width: 91%;"></div>
+                </div>
+                <span class="skill-note">Core Web Vitals, Code splitting, Lazy loading, Lighthouse 98+ scores</span>
+              </div>
+            </div>
+
+            <div class="category-footer">
+              <span class="footer-tag">Responsive UI/UX</span>
+              <span class="footer-tag">Vite & Webpack</span>
+              <span class="footer-tag">Figma to Pixel</span>
+              <span class="footer-tag">WCAG Standards</span>
+            </div>
+          </div>
+
+          <!-- PILLAR 2: BACKEND SKILLS -->
+          <div class="skill-category-card glass-panel card-backend" data-category="backend">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <div>
+                <div class="category-badge">Best & Resilient</div>
+                <h3 class="category-title">Backend Skills</h3>
+              </div>
+            </div>
+            <p class="category-desc">
+              Designing scalable APIs, robust database architectures, and distributed microservices capable of handling high throughput.
+            </p>
+
+            <div class="skills-list">
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-brands fa-node-js"></i> Node.js & Express / NestJS</span>
+                  <span class="skill-level">94%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-green" style="width: 94%;"></div>
+                </div>
+                <span class="skill-note">Non-blocking event loop, custom middleware, clustering, JWT & OAuth</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-brands fa-python"></i> Python (FastAPI & Django)</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-green" style="width: 92%;"></div>
+                </div>
+                <span class="skill-note">High-concurrency async I/O, Pydantic type validation, background workers</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-database"></i> PostgreSQL & Prisma / SQLAlchemy</span>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-green" style="width: 90%;"></div>
+                </div>
+                <span class="skill-note">Relational schema design, B-tree indexes, connection pooling, ACID safety</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-bolt"></i> Redis In-Memory & Message Queues</span>
+                  <span class="skill-level">89%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-green" style="width: 89%;"></div>
+                </div>
+                <span class="skill-note">Sub-millisecond key-value caching, Pub/Sub channels, rate-limiting, BullMQ</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-brands fa-docker"></i> Docker & Microservices Architecture</span>
+                  <span class="skill-level">87%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-green" style="width: 87%;"></div>
+                </div>
+                <span class="skill-note">Containerization, multi-stage Dockerfiles, compose clusters, service meshes</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-network-wired"></i> RESTful APIs & GraphQL</span>
+                  <span class="skill-level">93%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-green" style="width: 93%;"></div>
+                </div>
+                <span class="skill-note">API versioning, WebSockets, real-time bi-directional events, OpenAPI specs</span>
+              </div>
+            </div>
+
+            <div class="category-footer">
+              <span class="footer-tag">MongoDB NoSQL</span>
+              <span class="footer-tag">Linux / Nginx</span>
+              <span class="footer-tag">CI/CD Pipelines</span>
+              <span class="footer-tag">System Design</span>
+            </div>
+          </div>
+
+          <!-- PILLAR 3: AI & MACHINE LEARNING SKILLS -->
+          <div class="skill-category-card glass-panel card-ai" data-category="ai">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div>
+                <div class="category-badge">Intelligent & Modern</div>
+                <h3 class="category-title">AI & ML Skills</h3>
+              </div>
+            </div>
+            <p class="category-desc">
+              Harnessing generative AI, Large Language Models, vector knowledge stores, and intelligent agent workflows.
+            </p>
+
+            <div class="skills-list">
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-diagram-project"></i> RAG (Retrieval-Augmented Gen)</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-purple" style="width: 92%;"></div>
+                </div>
+                <span class="skill-note">Hybrid BM25 + dense search, semantic chunking, re-ranking cross-encoders</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-robot"></i> LLM Integrations (OpenAI, Gemini, Claude)</span>
+                  <span class="skill-level">94%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-purple" style="width: 94%;"></div>
+                </div>
+                <span class="skill-note">Function calling, JSON schema guarantees, streaming completions, system prompts</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-cubes-stacked"></i> Vector DBs (Pinecone, Chroma, pgvector)</span>
+                  <span class="skill-level">89%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-purple" style="width: 89%;"></div>
+                </div>
+                <span class="skill-note">High-dimensional cosine indexing, metadata filtering, embedding caches</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-link"></i> LangChain & LlamaIndex Frameworks</span>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-purple" style="width: 90%;"></div>
+                </div>
+                <span class="skill-note">LCEL chains, autonomous agent workflows, conversation memory, tool execution</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-microchip"></i> PyTorch & Deep Learning Foundations</span>
+                  <span class="skill-level">84%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-purple" style="width: 84%;"></div>
+                </div>
+                <span class="skill-note">Tensors, neural backprop, HuggingFace transformers, transfer learning</span>
+              </div>
+
+              <!-- Skill Item -->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"><i class="fa-solid fa-comments"></i> Prompt Engineering & Evaluation</span>
+                  <span class="skill-level">95%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-purple" style="width: 95%;"></div>
+                </div>
+                <span class="skill-note">Chain-of-thought, Few-shot reasoning, hallucination reduction, eval frameworks</span>
+              </div>
+            </div>
+
+            <div class="category-footer">
+              <span class="footer-tag">Autonomous Agents</span>
+              <span class="footer-tag">HuggingFace</span>
+              <span class="footer-tag">NLP & CV</span>
+              <span class="footer-tag">Embeddings</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Portfolio Showcase</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Engineering Projects</span></h2>
+          <p class="section-subtitle">
+            A curated selection of production-grade systems showcasing modern frontend architecture, backend resilience, and applied AI.
+          </p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filter-group" id="project-filters">
+          <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+          <button class="filter-btn" data-filter="ai" id="filter-ai"><i class="fa-solid fa-brain"></i> AI & ML</button>
+          <button class="filter-btn" data-filter="backend" id="filter-backend"><i class="fa-solid fa-server"></i> Backend Systems</button>
+          <button class="filter-btn" data-filter="frontend" id="filter-frontend"><i class="fa-brands fa-react"></i> Frontend & Full Stack</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- PROJECT 1: AI RAG Platform -->
+          <article class="project-card glass-panel" data-category="ai" id="project-neuroquery">
+            <div class="project-media">
+              <img src="assets/images/project-ai-rag.jpg" alt="NeuroQuery AI Enterprise RAG Platform" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="neuroquery">
+                  <i class="fa-solid fa-circle-info"></i> Architecture View
+                </button>
+              </div>
+              <span class="project-category-tag tag-ai">AI & Machine Learning</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">NeuroQuery: Enterprise Multimodal RAG Engine</h3>
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="View Source Code" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                  <a href="#projects" class="icon-link project-modal-trigger" data-project="neuroquery" title="Architecture Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <p class="project-summary">
+                A high-performance contextual intelligence platform featuring multi-dimensional vector embeddings, hybrid semantic re-ranking, 
+                and low-latency conversational AI memory powered by LangChain and pgvector.
+              </p>
+              <div class="project-metrics-chip">
+                <span><i class="fa-solid fa-bolt"></i> &lt; 280ms Vector Retrieval</span>
+                <span><i class="fa-solid fa-check-double"></i> 99.2% Precision</span>
+              </div>
+              <div class="project-tech-stack">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>LangChain</span>
+                <span>pgvector</span>
+                <span>OpenAI API</span>
+                <span>React</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Distributed Cloud Microservices -->
+          <article class="project-card glass-panel" data-category="backend" id="project-omniflow">
+            <div class="project-media">
+              <img src="assets/images/project-backend-cloud.jpg" alt="OmniFlow Distributed Backend Architecture" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="omniflow">
+                  <i class="fa-solid fa-circle-info"></i> Architecture View
+                </button>
+              </div>
+              <span class="project-category-tag tag-backend">Backend Systems</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">OmniFlow: Distributed Microservices Hub</h3>
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="View Source Code" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                  <a href="#projects" class="icon-link project-modal-trigger" data-project="omniflow" title="Architecture Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <p class="project-summary">
+                Fault-tolerant cloud backend processing 32,000+ req/s with event-driven message queuing, Redis clustering, 
+                automated circuit breakers, and PostgreSQL transactional data isolation.
+              </p>
+              <div class="project-metrics-chip">
+                <span><i class="fa-solid fa-gauge"></i> 15ms P99 Latency</span>
+                <span><i class="fa-solid fa-shield-halved"></i> Zero Data Loss Architecture</span>
+              </div>
+              <div class="project-tech-stack">
+                <span>Node.js</span>
+                <span>FastAPI</span>
+                <span>PostgreSQL</span>
+                <span>Redis</span>
+                <span>Docker</span>
+                <span>BullMQ</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: NexusUI Creative Studio -->
+          <article class="project-card glass-panel" data-category="frontend" id="project-nexusui">
+            <div class="project-media">
+              <img src="assets/images/project-frontend-studio.jpg" alt="NexusUI Design System & Studio" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="nexusui">
+                  <i class="fa-solid fa-circle-info"></i> Architecture View
+                </button>
+              </div>
+              <span class="project-category-tag tag-frontend">Frontend & Full Stack</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">NexusUI: Next-Gen Reactive Component Studio</h3>
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="View Source Code" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                  <a href="#projects" class="icon-link project-modal-trigger" data-project="nexusui" title="Architecture Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <p class="project-summary">
+                Modern responsive web design system with glassmorphic widgets, interactive real-time theme customization, 
+                state visualization, and high-performance canvas integrations.
+              </p>
+              <div class="project-metrics-chip">
+                <span><i class="fa-solid fa-wand-magic-sparkles"></i> 60fps Smooth Transitions</span>
+                <span><i class="fa-solid fa-mobile-screen"></i> 100% Fluid Responsive</span>
+              </div>
+              <div class="project-tech-stack">
+                <span>React 18</span>
+                <span>TypeScript</span>
+                <span>Modern CSS</span>
+                <span>TailwindCSS</span>
+                <span>Zustand</span>
+                <span>Vite</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Engineering Journey -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Proven Track Record</span>
+          <h2 class="section-title">Experience & <span class="gradient-text">Milestones</span></h2>
+          <p class="section-subtitle">
+            A chronological timeline of building production platforms, mentoring teams, and pushing technical boundaries.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker marker-ai"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Lead Full Stack & AI Engineer</h3>
+                  <span class="timeline-company">Cognitive Cloud Solutions</span>
+                </div>
+                <span class="timeline-period">2024 — Present</span>
+              </div>
+              <p class="timeline-description">
+                Architecting generative AI applications, high-throughput backend services, and scalable React web architectures. 
+                Spearheaded enterprise RAG integration reducing customer query response times by 68%.
+              </p>
+              <div class="timeline-tags">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>LangChain</span>
+                <span>React</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker marker-backend"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Senior Backend Developer</h3>
+                  <span class="timeline-company">Aether Systems Inc.</span>
+                </div>
+                <span class="timeline-period">2022 — 2024</span>
+              </div>
+              <p class="timeline-description">
+                Designed and maintained distributed microservices handling millions of daily API transactions. 
+                Constructed caching strategies with Redis and optimized PostgreSQL database queries, boosting throughput by 4.2x.
+              </p>
+              <div class="timeline-tags">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>Redis</span>
+                <span>PostgreSQL</span>
+                <span>Microservices</span>
+                <span>AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker marker-frontend"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Frontend & Web Engineer</h3>
+                  <span class="timeline-company">PixelForge Studio</span>
+                </div>
+                <span class="timeline-period">2021 — 2022</span>
+              </div>
+              <p class="timeline-description">
+                Built interactive single-page applications and responsive client portals with modern JavaScript/TypeScript, 
+                Vanilla CSS, and React. Maintained 98+ Google Lighthouse scores across all client deliverables.
+              </p>
+              <div class="timeline-tags">
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>HTML5 / CSS3</span>
+                <span>Responsive UI</span>
+                <span>Webpack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Get In Touch</span>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-subtitle">
+            Have an exciting idea, engineering position, or AI project? Feel free to reach out directly.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Left Info Cards -->
+          <div class="contact-info-panel">
+            <div class="contact-card glass-panel">
+              <div class="contact-icon cyan">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Direct Email</h4>
+                <a href="mailto:suvam.gyawali.dev@gmail.com">suvam.gyawali.dev@gmail.com</a>
+                <small>Quick response within 24 hours</small>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon green">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn Network</h4>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/suvam-gyawali</a>
+                <small>Professional updates & insights</small>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon purple">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <h4>GitHub Repositories</h4>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com/suvam-gyawali</a>
+                <small>Open source code & systems</small>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon amber">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Current Location</h4>
+                <p>Kathmandu, Nepal (Open to Remote Worldwide)</p>
+                <small>UTC+5:45 Flexible Timezone Collaboration</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Contact Form -->
+          <div class="contact-form-panel glass-panel">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span class="required">*</span></label>
+                  <div class="input-container">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="name" name="name" placeholder="e.g. Alex Morgan" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email <span class="required">*</span></label>
+                  <div class="input-container">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="email" name="email" placeholder="alex@company.com" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Project Domain / Subject <span class="required">*</span></label>
+                <div class="input-container">
+                  <i class="fa-solid fa-tag input-icon"></i>
+                  <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select an inquiry category...</option>
+                    <option value="Full Stack Web Project">Full Stack Web Project</option>
+                    <option value="AI / LLM / RAG Engineering">AI / LLM / RAG Engineering</option>
+                    <option value="Backend Architecture / Microservices">Backend Architecture / Microservices</option>
+                    <option value="Frontend Development">Frontend Development</option>
+                    <option value="Job / Consulting Opportunity">Job / Consulting Opportunity</option>
+                    <option value="Other Inquiry">Other Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Overview / Message <span class="required">*</span></label>
+                <div class="input-container textarea-container">
+                  <i class="fa-regular fa-comment-dots input-icon"></i>
+                  <textarea id="message" name="message" rows="5" placeholder="Describe your goals, tech requirements, or project timeline..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-glow submit-btn" id="submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Technical Project Architecture Modal -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <div class="modal-dialog glass-panel" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-content" id="modal-dynamic-content">
+        <!-- Content injected dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <span class="logo-symbol">&lt;/&gt;</span>
+          <span class="logo-text">Suvam<span class="highlight">.dev</span></span>
+        </a>
+        <p class="footer-tagline">Architecting modern web experiences, distributed backends & AI systems.</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:suvam.gyawali.dev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Suvam Gyawali. Designed & Engineered with precision.</p>
+        <a href="#hero" class="back-to-top" id="back-to-top-btn" aria-label="Back to top">
+          <i class="fa-solid fa-chevron-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>

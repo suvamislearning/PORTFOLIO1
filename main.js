@@ -299,7 +299,7 @@ const projectData = {
   neuroquery: {
     title: 'NeuroQuery: Enterprise Multimodal RAG Engine',
     category: 'Artificial Intelligence & Machine Learning',
-    banner: 'assets/images/project-ai-rag.jpg',
+    banner: './assets/images/project-ai-rag.jpg',
     overview:
       'NeuroQuery is an enterprise-grade retrieval-augmented generation platform engineered to deliver sub-300ms query responses across multi-gigabyte proprietary vector embeddings.',
     architectureDetails: [
@@ -326,7 +326,7 @@ const projectData = {
   omniflow: {
     title: 'OmniFlow: Distributed Microservices Hub',
     category: 'Backend Architecture & Cloud Systems',
-    banner: 'assets/images/project-backend-cloud.jpg',
+    banner: './assets/images/project-backend-cloud.jpg',
     overview:
       'A resilient, event-driven backend microservices hub orchestrating high-concurrency order workflows, payment event streams, and real-time inventory synchronization.',
     architectureDetails: [
@@ -353,7 +353,7 @@ const projectData = {
   nexusui: {
     title: 'NexusUI: Next-Gen Reactive Component Studio',
     category: 'Frontend Engineering & Design Systems',
-    banner: 'assets/images/project-frontend-studio.jpg',
+    banner: './assets/images/project-frontend-studio.jpg',
     overview:
       'A cutting-edge interactive design system and component studio empowering developers to design, test, and export accessible glassmorphic UI widgets in real-time.',
     architectureDetails: [
@@ -394,7 +394,7 @@ function initProjectModal() {
         <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--frontend-cyan); text-transform: uppercase; letter-spacing: 0.1em;">${data.category}</span>
         <h2 style="font-size: 1.8rem; margin: 0.4rem 0 1rem;">${data.title}</h2>
         <div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.5rem; max-height: 280px;">
-          <img src="${data.banner}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover;" />
+          <img src="${data.banner}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80';" />
         </div>
         <p style="color: var(--text-muted); font-size: 1.02rem; line-height: 1.6; margin-bottom: 1.5rem;">${data.overview}</p>
       </div>
